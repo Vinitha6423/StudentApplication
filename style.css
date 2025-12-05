@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f2f4f8;
+  color: #1f2937;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 24px 24px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #eef2ff;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.tab.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.form {
+  display: block; /* always visible; JS uses .hidden to hide/show */
+  margin-top: 4px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.2);
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.btn.secondary {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.student-header h2 {
+  margin-bottom: 4px;
+}
+
+.small-text {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.success-msg {
+  margin-top: 12px;
+  color: #15803d;
+  font-size: 0.9rem;
+}
