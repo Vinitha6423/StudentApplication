@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Application Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1>Student Application Management System</h1>
+      <p>Register, login, and submit student details easily</p>
+    </header>
+
+    <main class="main">
+      <!-- Auth section -->
+      <section id="auth-section" class="card">
+        <div class="tabs">
+          <button id="login-tab" class="tab active">Login</button>
+          <button id="register-tab" class="tab">Register</button>
+        </div>
+
+        <!-- Login form -->
+        <form id="login-form" class="form">
+          <div class="form-group">
+            <label for="login-email">Email (Gmail only)</label>
+            <input type="email" id="login-email" required placeholder="yourname@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+          </div>
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+
+        <!-- Register form -->
+        <form id="register-form" class="form hidden">
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Phone (10 digits)</label>
+            <input type="text" id="reg-phone" maxlength="10" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email (Gmail only)</label>
+            <input type="email" id="reg-email" required placeholder="yourname@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm-password">Confirm Password</label>
+            <input type="password" id="reg-confirm-password" required />
+          </div>
+          <button type="submit" class="btn secondary">Register</button>
+        </form>
+      </section>
+
+      <!-- Student details section -->
+      <section id="student-section" class="card hidden">
+        <div class="student-header">
+          <div>
+            <h2 id="welcome-text">Welcome, Student</h2>
+            <p class="small-text">Please fill in your details below and submit.</p>
+          </div>
+          <button id="logout-btn" class="btn secondary">Logout</button>
+        </div>
+
+        <form id="student-form" class="form">
+          <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" required />
+          </div>
+          <div class="form-group">
+            <label for="father-name">Father Name</label>
+            <input type="text" id="father-name" required />
+          </div>
+          <div class="form-group">
+            <label for="mother-name">Mother Name</label>
+            <input type="text" id="mother-name" required />
+          </div>
+          <div class="form-group">
+            <label for="student-phone">Phone (10 digits)</label>
+            <input type="text" id="student-phone" maxlength="10" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="course">Course</label>
+            <input type="text" id="course" />
+          </div>
+          <div class="form-group">
+            <label for="other-info">Other Info</label>
+            <textarea id="other-info" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn primary">Submit Details</button>
+        </form>
+
+        <p id="submit-message" class="success-msg hidden">
+          Student details submitted successfully to the management team!
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
